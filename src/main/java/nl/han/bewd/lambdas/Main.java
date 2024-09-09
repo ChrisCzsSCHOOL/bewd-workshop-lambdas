@@ -12,14 +12,17 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Buiten spits met fiets");
         Reis mijnReis = new Reis(false);
-        VervoerStrategy vervoer = new FietsVervoerStrategy();
-        mijnReis.simuleerReis(vervoer);
+        VervoerStrategy vervoer = new GravitySlingshotStrategy();
+
+        VervoerStrategy slingshotVervoer = (isReisTijdensSpits) -> 1;
+        mijnReis.simuleerReis(slingshotVervoer);
 
         System.out.println("Tijdens de spits");
         mijnReis.setSpits(true);
-        mijnReis.simuleerReis(vervoer);                   // Met fiets
-        mijnReis.simuleerReis(new AutoVervoerStrategy()); // Met auto
-        mijnReis.simuleerReis(new OVVervoerStrategy());   // Met OV
+        mijnReis.simuleerReis(slingshotVervoer);                // Met de Gravity slingshot.
+        mijnReis.simuleerReis(new AutoVervoerStrategy());      // Met de auto.
+        mijnReis.simuleerReis(new OVVervoerStrategy());        // Met het ov.
+        mijnReis.simuleerReis(new FietsVervoerStrategy());     // Met de Fiets.
 
         System.out.println("Met <nieuw> vervoer (Stap 2)  ");
         System.out.println("TODO:");
