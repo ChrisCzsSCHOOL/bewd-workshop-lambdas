@@ -1,4 +1,4 @@
-package nl.han.bewd.lambdas.reis;
+package nl.han.bewd.lambdas.reisOpdr.reis;
 
 import java.util.Random;
 

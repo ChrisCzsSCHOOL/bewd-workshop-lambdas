@@ -1,4 +1,4 @@
-package nl.han.bewd.lambdas.reis;
+package nl.han.bewd.lambdas.reisOpdr.reis;
 
 // Met de auto is spits erg stom.
 public class AutoVervoerStrategy implements VervoerStrategy{

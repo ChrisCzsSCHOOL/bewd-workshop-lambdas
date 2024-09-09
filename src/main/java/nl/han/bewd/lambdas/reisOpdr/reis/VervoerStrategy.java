@@ -1,4 +1,4 @@
-package nl.han.bewd.lambdas.reis;
+package nl.han.bewd.lambdas.reisOpdr.reis;
 
 /*
 VervoerStrategy heeft een enkele methode voor het berekenen van de reistijd. Afstand is hierin nog niet meegenomen.
