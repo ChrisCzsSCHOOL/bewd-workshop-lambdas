@@ -12,7 +12,13 @@ public class Main {
         Reis mijnReis = new Reis(false);
         VervoerStrategy vervoer = new GravitySlingshotStrategy();
 
-        VervoerStrategy slingshotVervoer = (isReisTijdensSpits) -> 1;
+        VervoerStrategy slingshotVervoer = (isReisTijdensSpits) -> {
+            if (isReisTijdensSpits) {
+                return 2;
+            } else {
+                return 1;
+            }
+        };
         mijnReis.simuleerReis(slingshotVervoer);
 
         System.out.println("Tijdens de spits");
